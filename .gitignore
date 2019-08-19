@@ -112,3 +112,5 @@ venv.bak/
 #To avoid pushing the data
 /data
 .csv
+.txt
+.6B
