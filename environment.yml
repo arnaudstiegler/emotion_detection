@@ -1,0 +1,19 @@
+name: emotion_detection
+
+channels:
+  - conda-forge
+  - ioam
+  - soumith
+dependencies:
+  - python=3.6
+  - numpy
+  - jupyter
+  - pandas
+  - matplotlib
+  - seaborn
+  - pytorch
+  - torchvision
+  - pip
+  - pip:
+    - tqdm
+    - sklearn
