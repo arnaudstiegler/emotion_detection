@@ -110,7 +110,6 @@ venv.bak/
 .idea
 
 #To avoid pushing the data
-/data
-.csv
+data/embedding/
 .txt
 .6B
