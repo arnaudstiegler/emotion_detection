@@ -3,10 +3,17 @@ import torch.nn.functional as F
 from torch import nn
 
 class Transformer(nn.Module):
-	def __init__(self,k, heads, num_block, num_token, seq_length, num_classes):
+	def __init__(self,k, heads, num_block, num_token, seq_length, num_classes,pretrained_embedding=False, weights_matrix=None):
 		super().__init__()
 
-		self.token_embedding = nn.Embedding(num_token, k)
+		if(pretrained_embedding):
+			num_embeddings, embedding_dim = weights_matrix.shape
+			emb_layer = nn.Embedding.from_pretrained(torch.FloatTensor(weights_matrix))
+			emb_layer.weight.requires_grad = False
+		else:
+			emb_layer = nn.Embedding(seq_length, k)
+
+		self.token_embedding = emb_layer
 		self.position_embedding = nn.Embedding(seq_length, k)
 
 		transfo_block_list = []

@@ -1,7 +1,9 @@
-## Sentiment Analysis: Emotion in Text
+## Emotion Detection
 
-In a variation on the popular task of sentiment analysis, this dataset contains labels for the emotional content (such as happiness, sadness, and anger) of texts. Hundreds to thousands of examples across 13 labels.
-The dataset is available at: https://www.figure-eight.com/data-for-everyone/
+A few experiments on emotion detection in texts. Two different datasets are used:
+* [Isear dataset](https://www.researchgate.net/figure/Characteristics-of-the-ISEAR-Dataset_tbl1_313407834)
+* [Crowdflower dataset](https://www.figure-eight.com/data-for-everyone/)
+
 
 Trying a bunch of models/frameworks:
 * LSTM in Keras (tf 2.0)

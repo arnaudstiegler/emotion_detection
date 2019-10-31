@@ -113,3 +113,4 @@ venv.bak/
 data/embedding/
 .txt
 .6B
+.tensorboard-logs/
