@@ -1,5 +1,7 @@
 import csv
 import pandas as pd
+from git_root import git_root
+import os
 
 def process_raw_isear_data(data_path='data/isear.csv', save_path='data/isear_processed.csv'):
     texts=[]
@@ -25,4 +27,4 @@ def process_raw_isear_data(data_path='data/isear.csv', save_path='data/isear_pro
     return
 
 if __name__=='__main__':
-    process_raw_isear_data()
+    process_raw_isear_data(os.path.join(git_root(),'data','isear.csv'))

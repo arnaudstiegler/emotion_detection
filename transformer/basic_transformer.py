@@ -2,6 +2,8 @@ import torch
 import torch.nn.functional as F 
 from torch import nn
 
+#TODO: add GPU support
+
 class Transformer(nn.Module):
 	def __init__(self,k, heads, num_block, num_token, seq_length, num_classes,pretrained_embedding=False, weights_matrix=None):
 		super().__init__()
